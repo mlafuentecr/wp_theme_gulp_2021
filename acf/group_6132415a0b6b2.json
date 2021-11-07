@@ -1,0 +1,41 @@
+{
+    "key": "group_6132415a0b6b2",
+    "title": "promociones",
+    "fields": [
+        {
+            "key": "field_613242a76ec2c",
+            "label": "modificar Banners",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "message": "<a href=\"\/wp-admin\/admin.php?page=acf-options-banners\" class=\"button button-primary button-large add-field\">Modificar Banners<\/a>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "176"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1633402999
+}

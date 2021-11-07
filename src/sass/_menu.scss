@@ -1,0 +1,44 @@
+@import 'variables';
+/*------------------------------------------*/
+/*   Menu
+/*------------------------------------------*/
+#header-top{
+  text-transform: uppercase;
+
+  ul{
+    list-style-type: none;
+    .nav-link {
+      padding: 0px;
+      color:white;
+      font-size: $f_menu;
+      &:hover{
+        color: $prim-color-lighter;
+      }
+    }
+  }
+
+// Desktop menu
+  #menu-principal-1 {
+    display: flex;
+    background: blue;
+    display: flex;
+    flex: 1;
+}
+
+}
+
+
+
+
+/* CTA 2 buttons only the rest is hide */
+.buttons-cta{
+  li{
+    display:none;
+  }
+  @media(max-width:$md){
+    .btn{
+      display:flex;
+    }
+  }
+ 
+}

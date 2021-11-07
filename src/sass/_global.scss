@@ -1,0 +1,85 @@
+@import 'variables';
+@import 'loginForm';
+@import 'blocks';
+@import '../css/bootstrap.min.css';
+
+/*----------------------------------*/
+/*  Reset 
+/*----------------------------------*/
+
+*,
+*:before,
+*:after {
+	transition: all 0.5;
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+	padding: 0px;
+	margin: 0px;
+	scroll-behavior: smooth;
+	font-family: $font-regular;
+	position: relative;
+	background-color: $bg-color;
+
+	p {
+		font-family: $font-regular;
+	}
+	b,
+	strong {
+		font-weight: 600;
+	}
+	a {
+		color: $prim-color-lighter;
+	}
+}
+
+body {
+	background-color: $bg-color;
+}
+html {
+	@media (max-width: $md) {
+		font-size: 14px;
+	}
+	@media (min-width: $md) {
+		font-size: 16px;
+	}
+	@media (min-width: $lg) {
+		font-size: 16px;
+	}
+}
+
+/*----------------------------------*/
+/*  Bottons
+/*----------------------------------*/
+
+.btn {
+	padding: 2px 19px;
+	border-radius: 10px;
+	max-width: 200px;
+	&-login {
+		background-color: red;
+	}
+	&-register {
+		background-color: transparent;
+		border: 1px solid white;
+	}
+}
+
+// btn-register btn-register-popup
+
+/*----------------------------------*/
+/*  Boostrap reset 
+/*----------------------------------*/
+.bg-dark {
+	background-color: $bg-color !important;
+	.nav-link {
+		color: white;
+		padding: 2px 19px;
+		&:hover {
+			color: $prim-color-lighter !important;
+		}
+	}
+}

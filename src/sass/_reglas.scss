@@ -1,0 +1,35 @@
+@import 'variables';
+.collapse-block {
+	background-color: transparent !important;
+	border: 1px solid #2f2f2f;
+	padding: 15px;
+	margin-bottom: 10px;
+	cursor: pointer;
+
+	h2 {
+		color: $prim-color-lighter !important;
+		font-size: 1.125;
+		margin-top: 0px !important;
+		&:before {
+			content: '❯';
+			margin-right: 10px;
+		}
+	}
+
+	#collapseOne {
+		max-height: 0px;
+		overflow: hidden;
+		transition: 0.5 all;
+		* {
+			color: white !important;
+		}
+	}
+
+	&.show {
+		#collapseOne {
+			margin-top: 50px;
+			max-height: initial !important;
+			transition: 0.5 all;
+		}
+	}
+}

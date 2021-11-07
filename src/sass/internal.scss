@@ -1,0 +1,36 @@
+//UTILTIES
+@import 'blocks';
+@import 'variables';
+@import 'global';
+@import 'menu';
+//PAGES
+// @import 'sobre-nosotros';
+// @import 'deportes';
+// @import 'casino';
+// @import 'caballos';
+// @import 'e-sports';
+// @import 'casino-en-vivo';
+// @import 'promociones';
+// @import 'banca';
+// @import 'poker';
+
+/*-------------------------------------------------------*/
+/*  Pages
+/*-------------------------------------------------------*/
+
+.hero {
+	min-height: 370px;
+	min-width: 100%;
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	background-position: top center;
+}
+.box {
+	&-gray {
+		background: #1e1e1e;
+		padding: 50px;
+		border-radius: 20px;
+		margin: 40px auto;
+		color: white;
+	}
+}

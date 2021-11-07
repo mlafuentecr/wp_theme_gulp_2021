@@ -1,0 +1,80 @@
+{
+    "key": "group_6146178cec4c5",
+    "title": "1_Tema global",
+    "fields": [
+        {
+            "key": "field_612900c2b6774",
+            "label": "principal (Background)",
+            "name": "principal",
+            "type": "color_picker",
+            "instructions": "defaulth #181c66",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#181c66"
+        },
+        {
+            "key": "field_6129010fb6775",
+            "label": "secondary Details",
+            "name": "secondary",
+            "type": "color_picker",
+            "instructions": "defaulth #ec2d3c",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ec2d3c"
+        },
+        {
+            "key": "field_612905cddb7f9",
+            "label": "theme color",
+            "name": "theme_color",
+            "type": "select",
+            "instructions": "if theme  color is dark text will be invert so if theme is black text will be  white color automatic",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "theme_light": "Theme Light (text will be dark)",
+                "theme_dark": "Theme Dark (text will be white)"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1631983565,
+    "wpml_field_group_language": "en"
+}
