@@ -7,18 +7,29 @@
     $post = get_post();
     $slugname = get_post_field( 'post_name', $post );
 ?>
-<html <?php language_attributes();?> >
+<html <?php language_attributes();?>>
+
+  <title><?php
+        bloginfo('name');
+        if (wp_title('', false)) {
+            echo '|';
+        } else {
+            echo bloginfo('description');
+        } wp_title('');
+        ?></title>
+
+
   <head name="top">
     <!-- favicons -->
     <!--[if IE]><link rel="shortcut icon" href="favicon.ico" /><![endif]-->
     <link rel="apple-touch-icon" sizes="180x180"
-    href="<?php echo get_stylesheet_directory_uri(); ?>/apple-touch-icon.png">
+      href="<?php echo get_stylesheet_directory_uri(); ?>/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32"
-    href="<?php echo get_stylesheet_directory_uri(); ?>/favicon-32x32.png">
+      href="<?php echo get_stylesheet_directory_uri(); ?>/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16"
-    href="<?php echo get_stylesheet_directory_uri(); ?>/favicon-16x16.png">
+      href="<?php echo get_stylesheet_directory_uri(); ?>/favicon-16x16.png">
     <link rel="manifest" crossorigin="use-credentials"
-    href="<?php echo get_stylesheet_directory_uri(); ?>/manifest.json">
+      href="<?php echo get_stylesheet_directory_uri(); ?>/manifest.json">
     <link rel="profile" href="https://gmpg.org/xfn/11" />
 
     <meta name="msapplication-TileColor" content="#da532c">
