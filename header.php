@@ -9,14 +9,16 @@
 ?>
 <html <?php language_attributes();?>>
 
-  <title><?php
-        bloginfo('name');
-        if (wp_title('', false)) {
-            echo '|';
-        } else {
-            echo bloginfo('description');
-        } wp_title('');
-        ?></title>
+  <title>
+    <?php
+    bloginfo('name');
+    if (wp_title('', false)) {
+        echo '|';
+    } else {
+        echo bloginfo('description');
+    } wp_title('');
+  ?>
+  </title>
 
 
   <head name="top">
