@@ -439,6 +439,9 @@
 		background-position: center;
 		//https://isotropic.co/hex-color-to-css-filter/
 		//filter: invert(99%) sepia(2%) saturate(114%) hue-rotate(215deg) brightness(118%) contrast(91%);
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 	&-facebook {
 		background-image: url('../../inc/images/facebook.png');
@@ -710,6 +713,9 @@
 		min-height: 100%;
 		display: flex;
 		flex: 1;
+		&:hover {
+			opacity: 0.8;
+		}
 		img {
 			max-width: 100%;
 			height: auto;
