@@ -51,16 +51,65 @@ html {
 	}
 }
 
+footer {
+	ul {
+		list-style: none;
+	}
+	a {
+		color: white;
+		text-decoration: none;
+		&:hover {
+			color: $over;
+		}
+	}
+}
+
+/*----------------------------------*/
+/*  Boostrap reset 
+/*----------------------------------*/
+.bg {
+	&-dark {
+		background-color: $bg-color;
+	}
+
+	&-gray {
+		@extend .bg-dark;
+		background-color: #191919 !important;
+	}
+
+	&-gray-ligher {
+		@extend .bg-dark;
+		background-color: #252424 !important;
+	}
+}
+
 /*----------------------------------*/
 /*  Bottons
 /*----------------------------------*/
 
 .btn {
-	padding: 2px 19px;
-	border-radius: 10px;
 	max-width: 200px;
+	padding: 2px 19px;
+	font-weight: bold;
+	color: #000;
+	border-radius: 10px;
+	font-size: $px16;
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+	a {
+		color: $prim-color;
+		&:hover {
+			color: #000;
+		}
+	}
+	&:hover {
+		opacity: 0.8;
+	}
 	&-login {
-		background-color: red;
+		border: 1px solid $prim-color-lighter;
+		color: $prim-color;
+		background-color: $prim-color-lighter;
 	}
 	&-register {
 		background-color: transparent;
@@ -68,18 +117,87 @@ html {
 	}
 }
 
-// btn-register btn-register-popup
+/*----------------------------------*/
+/*  others
+/*----------------------------------*/
+
+.container {
+	&-custom {
+		max-width: 1140px;
+	}
+}
+
+.blocks-gallery {
+	&-grid {
+		flex-direction: column;
+		align-content: space-between;
+		justify-content: flex-start;
+		flex: 1;
+		background: blue;
+		max-height: 300px;
+		gap: 5px;
+	}
+	&-item {
+		margin: 0px !important;
+		position: relative;
+		border-radius: 15px;
+		border: 1px solid #7d5e05;
+		overflow: hidden;
+		width: 20%;
+		img {
+			min-width: 200px;
+		}
+		&__caption {
+			color: white !important;
+			border: 1px solid white;
+			background: rgba(0, 0, 0, 0.4);
+			position: absolute;
+			max-width: 80px;
+			max-height: 25px;
+			bottom: 10px !important;
+			left: 12px;
+			padding: 0px !important;
+			&:hover {
+				background-color: $prim-color-lighter;
+			}
+		}
+	}
+	&-item:nth-child(1),
+	&-item:nth-child(2),
+	&-item:nth-child(4),
+	&-item:nth-child(5) {
+		max-width: 270px !important;
+	}
+	//Big image center #
+	&-item:nth-child(3) {
+		display: flex;
+		min-height: 100%;
+		width: 50%;
+		max-width: 545px;
+		Img {
+			min-height: 140px;
+			height: 100%;
+		}
+	}
+}
+
+.headline {
+	color: $sec-color;
+	font-weight: bold;
+	font-size: $px28;
+	background: #fde8ac;
+	background: -webkit-linear-gradient(to bottom, #fde8ac 0%, #ab8641 50%, #6d4a11 51%, #bfac4d 100%);
+	background: -moz-linear-gradient(to bottom, #fde8ac 0%, #ab8641 50%, #6d4a11 51%, #bfac4d 100%);
+	background: linear-gradient(to bottom, #fde8ac 0%, #ab8641 50%, #6d4a11 51%, #bfac4d 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 
 /*----------------------------------*/
-/*  Boostrap reset 
+/*  text
 /*----------------------------------*/
-.bg-dark {
-	background-color: $bg-color !important;
-	.nav-link {
-		color: white;
-		padding: 2px 19px;
-		&:hover {
-			color: $prim-color-lighter !important;
-		}
+.text {
+	&-gray {
+		color: gray;
 	}
 }

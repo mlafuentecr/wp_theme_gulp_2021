@@ -87,7 +87,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-banners"
+                "value": "acf-options-banners-promo"
             }
         ]
     ],
@@ -99,5 +99,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1633402597
+    "modified": 1636668948
 }

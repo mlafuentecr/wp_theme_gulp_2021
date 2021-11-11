@@ -1,8 +1,9 @@
 @import 'typography';
 
 $prim-color: white;
-$prim-color-lighter: red;
-$sec-color: #3a2452;
+$prim-color-lighter: #e3222b;
+$over: #e3222b;
+$sec-color: #b48437;
 $sec-color-lighter: #3a2452;
 $bg-color: black;
 
@@ -35,8 +36,8 @@ $xxl: 1400px;
 // ==================================
 // Slide
 // ==================================
-$slide-height: 600px;
-
+$slide-height: 500px;
+$slide-height-mobile: 220px;
 // ==================================================
 // Fonts
 // ==================================================
@@ -62,13 +63,12 @@ $gap_md: $px20;
 $gap_lg: $px40;
 
 //font SIzes
-$f_menu: $px14;
+$f_menu: $px12;
 $f_sm: $px12;
 $f_md: $px18;
 $f_paragraph: $px18;
 $f_paragraph_title: $px20;
 $f_lg: $px30;
-
 
 ///line-height
 $lh-sm: $px30;
@@ -83,8 +83,6 @@ $m-l: $px30;
 $mb-titles: $px30; //30px
 $m-block: 6.25rem auto;
 $m-headline: 6.25rem auto;
-
-
 
 $f_h1: $px40;
 $f_h2: $px30;

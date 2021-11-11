@@ -429,8 +429,10 @@
 	display: flex;
 	justify-content: center;
 	gap: 20px;
-	background-color: gray;
-
+	flex-wrap: wrap;
+	&-icons {
+		display: flex;
+	}
 	& a {
 		min-width: 60px;
 		height: 60px;
@@ -457,6 +459,15 @@
 		background-image: url('../../inc/images/instagram.png');
 		background-repeat: no-repeat;
 		background-size: contain;
+	}
+	&-whatsapp {
+		background-image: url('../../inc/images/whatsapp.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.text-gray {
+		min-width: 100%;
+		text-align: center;
 	}
 }
 
@@ -490,6 +501,222 @@
 		&:hover {
 			opacity: 1;
 			transform: translateY(0px);
+		}
+	}
+}
+
+.powered {
+	margin: auto;
+	height: 50px;
+	background: #252424;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgb(128, 128, 128);
+	.JazzGSimg {
+		background-image: url(../../inc/images/powered-jgs.png);
+		background-repeat: no-repeat;
+		width: 100px;
+		height: 50px;
+		background-size: contain;
+		display: flex;
+		background-position: center;
+		margin-left: 20px;
+	}
+}
+
+.gallery {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	.btn {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		background: transparent;
+		color: white;
+		border: 1px solid white;
+		&-light {
+			padding: 3px 6px;
+			background: transparent;
+			color: white;
+		}
+	}
+	&-item {
+		position: relative;
+		min-width: 25%;
+		border-radius: 15px;
+		overflow: hidden;
+		border: 1px solid $prim-color-lighter;
+
+		img {
+			min-width: 100%;
+			height: auto;
+		}
+		&__caption {
+			color: white !important;
+			border: 1px solid white;
+			background: rgba(0, 0, 0, 0.4);
+			position: absolute;
+			max-width: 80px;
+			max-height: 25px;
+			bottom: 10px !important;
+			left: 12px;
+			padding: 3px 6px;
+			white-space: nowrap;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			&:hover {
+				background-color: $prim-color-lighter;
+			}
+		}
+	}
+	&-item:nth-child(1),
+	&-item:nth-child(2),
+	&-item:nth-child(4),
+	&-item:nth-child(5) {
+		max-width: 270px !important;
+	}
+	//Big image center #
+	&-item:nth-child(3) {
+		display: flex;
+		min-height: 100%;
+		width: 50%;
+		max-width: 545px;
+		Img {
+			min-height: 140px;
+			height: 100%;
+		}
+	}
+
+	//Gallery image center
+	&-img-center {
+		@extend .gallery;
+		max-height: auto !important;
+		flex-direction: row;
+		margin-bottom: $mb-titles;
+
+		.gallery {
+			&-item {
+				position: relative;
+				background-image: none;
+				min-width: 25%;
+				border-radius: 15px;
+				overflow: hidden;
+				border: 1px solid $prim-color-lighter;
+				background-size: cover;
+				height: 150px;
+				margin: 0px;
+				margin-bottom: 5px;
+			}
+			//Big image center #
+			&-big {
+				display: flex;
+				min-height: 293px;
+				min-width: 100%;
+				max-width: 545px;
+				Img {
+					min-height: 140px;
+					height: 100%;
+				}
+			}
+		}
+
+		@media (max-width: $md) {
+			flex-direction: row;
+		}
+		@media (max-width: $sm) {
+			flex-direction: row;
+			.gallery {
+				&-item {
+					min-width: 50%;
+					min-height: 150px;
+					margin: 0px;
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+
+	&-img-left {
+		@extend .gallery;
+		min-height: 200px;
+		max-height: auto !important;
+		flex-direction: row;
+		margin-bottom: $mb-titles;
+		.gallery {
+			&-item {
+				position: relative;
+				background-image: none;
+				min-width: 25%;
+				border-radius: 15px;
+				overflow: hidden;
+				border: 1px solid $prim-color-lighter;
+
+				background-size: cover;
+				height: 150px;
+				margin: 0px;
+				margin-bottom: 5px;
+			}
+			//Big image center #
+			&-big {
+				display: flex;
+				min-height: 293px;
+				min-width: 100%;
+				max-width: 545px;
+				Img {
+					min-height: 140px;
+					height: 100%;
+				}
+			}
+		}
+
+		@media (max-width: $md) {
+			flex-direction: row;
+		}
+		@media (max-width: $sm) {
+			flex-direction: row;
+			.gallery {
+				&-item {
+					min-width: 50%;
+					min-height: 150px;
+					margin: 10px auto;
+				}
+			}
+		}
+	}
+
+	&-big {
+		min-width: 100% !important;
+	}
+}
+
+.promo {
+	&-wrap {
+		display: flex;
+		gap: 10px;
+		@media (max-width: $lg) {
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+	}
+
+	&-item {
+		height: auto;
+		min-height: 100%;
+		display: flex;
+		flex: 1;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		@media (max-width: $lg) {
+			justify-content: center;
+			min-width: 200px;
 		}
 	}
 }

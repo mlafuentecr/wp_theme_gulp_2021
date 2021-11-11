@@ -54,7 +54,7 @@ $understrap_includes = array(
   '/inc/functions/cleanup.php', // clean all website code elements from wp
   '/inc/functions/enqueue.php', // Enqueue scripts and styles.
   '/inc/functions/add_menus.php', // define menus
-  '/inc/functions/custom_dashboard.php', // add new look to dashboad
+  '/inc/functions/dashboard.php', // add new look to dashboad
   '/inc/functions/dashboad_menu.php', // add my menu for client use to dashboar
   '/inc/functions/custom_login_look.php', // re look the loging
   '/inc/functions/theme_support.php', // add wp supporth has thumbnails ect

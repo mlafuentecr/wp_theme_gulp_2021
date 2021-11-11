@@ -61,7 +61,23 @@ acf_register_block_type(array(
     'category'          => 'media',
 ));
 
+acf_register_block_type(array(
+    'name'              => 'Gallery image center',
+    'title'             => __('Gallery image center'),
+    'description'       => __('Gallery image center'),
+    'render_template'   => get_template_directory() .'/inc/parts/block-gallery-img-center.php',
+    'icon' => 'star-filled',
+    'category'          => 'media',
+));
 
+acf_register_block_type(array(
+    'name'              => 'Gallery image left',
+    'title'             => __('Gallery image left'),
+    'description'       => __('Gallery image left'),
+    'render_template'   => get_template_directory() .'/inc/parts/block-gallery-img-left.php',
+    'icon' => 'star-filled',
+    'category'          => 'media',
+));
 
 
 acf_register_block_type(array(
@@ -72,6 +88,21 @@ acf_register_block_type(array(
     'icon' => 'star-filled',
     'category'          => 'media',
 ));
+
+
+
+		
+// register a portfolio item block
+acf_register_block(array(
+    'name'				=> 'portfolio-item',
+    'title'				=> __('Portfolio Item'),
+    'description'		=> __('A custom block for portfolio items.'),
+    'render_template'	=>  get_template_directory() .'/inc/parts/block-gallery.php',
+    'category'          => 'media',
+    'icon' => 'star-filled',
+    'keywords'			=> array( 'portfolio' ),
+));
+
 
 
 acf_register_block_type(array(

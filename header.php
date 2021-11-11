@@ -39,6 +39,7 @@
     <meta charset="<?php bloginfo('charset');?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <?php wp_head();?>
+    <?php get_template_part( '/inc/parts/acf','checker'); ?>
     <?php get_template_part( '/inc/parts/google','analitycs'); ?>
   </head>
 
@@ -52,10 +53,9 @@
 		  <![endif]-->
 
       <header id='header-top'>
-        <div class="container">
-          <?php get_template_part( '/inc/parts/menu','principal'); ?>
-        </div>
+        <?php get_template_part( '/inc/parts/menu','principal'); ?>
       </header>
+
 
       <!-- main close in footer -->
       <main class='main-content'>

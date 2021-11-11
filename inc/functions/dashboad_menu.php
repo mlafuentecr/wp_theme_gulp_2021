@@ -20,7 +20,7 @@ function marioLafuente_dashboard_menu()
     <tr>
     <th class="text-left" style="width: 100%;" colspan="2">
     <h2 style="text-align: center;">WELCOME</h2>
-    <img style="background: #eee; width: 100%;" src="/wp-content/themes/client_theme/inc/images/login-logo.png" alt="logo" />
+    <img style="background: #eee; width: 100%;" src="/wp-content/themes/theme_1/inc/images/login-logo.png" alt="logo" />
     <p><span style="color: #999999;">to our<span style="color: #ff9900;"> NEW </span>panel, here you will find more easy way to control your site, Banner and more </span></p>
     </th>
     </tr>

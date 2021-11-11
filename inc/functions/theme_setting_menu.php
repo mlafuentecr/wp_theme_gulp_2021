@@ -23,8 +23,8 @@ acf_add_options_sub_page(array(
 'parent_slug' => 'theme-general-settings',
 ));
 acf_add_options_sub_page(array(
-'page_title' => 'Banners',
-'menu_title' => 'Banners',
+'page_title' => 'Banners Promo',
+'menu_title' => 'Banners Promo',
 'parent_slug' => 'theme-general-settings',
 ));
 acf_add_options_sub_page(array(

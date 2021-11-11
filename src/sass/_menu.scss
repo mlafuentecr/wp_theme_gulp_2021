@@ -1,44 +1,129 @@
 @import 'variables';
-/*------------------------------------------*/
-/*   Menu
-/*------------------------------------------*/
-#header-top{
-  text-transform: uppercase;
-
-  ul{
-    list-style-type: none;
-    .nav-link {
-      padding: 0px;
-      color:white;
-      font-size: $f_menu;
-      &:hover{
-        color: $prim-color-lighter;
-      }
-    }
-  }
-
-// Desktop menu
-  #menu-principal-1 {
-    display: flex;
-    background: blue;
-    display: flex;
-    flex: 1;
+.navbar {
+	flex-wrap: nowrap;
+	@media (max-width: $md) {
+		flex-wrap: wrap;
+	}
 }
+/*------------------------------------------*/
+/*   SHOW AND HIDE MENU TOP
+/*------------------------------------------*/
+#header-top {
+	text-transform: uppercase;
+	border-bottom: 1px solid $over;
+	a {
+		white-space: nowrap;
+	}
+	.menu-principal-container {
+		display: flex;
+		#menu-principal {
+			display: flex;
+			flex: 1;
+			justify-content: space-between;
+			align-items: center;
+			list-style: none;
+			margin-bottom: 0px;
+			gap: 10px;
+		}
+		a {
+			text-decoration: none;
+			color: white;
+			font-size: $f_menu;
+			font-family: $font-bold;
+			border-radius: 10px;
+			padding: 9px;
+			font-weight: 900;
+			&:hover {
+				color: $prim-color;
+			}
+		}
+		.btn-login,
+		.btn-register {
+			a {
+				color: $prim-color;
+				background-color: transparent;
+			}
+		}
+	}
 
-}
+	:not(.show) {
+		#menu-principal-1 {
+			display: none !important;
+		}
+	}
+	.show {
+		#menu-principal-1 {
+			display: flex !important;
+			flex-direction: column;
+			list-style: none;
+			margin: 0;
+			padding: 0px;
+			.menu-item {
+				min-width: 100%;
+				border-bottom: 1px solid white;
 
+				a {
+					color: white;
+				}
+				&:hover {
+					background-color: $over;
+				}
+			}
+		}
+		.btn-login,
+		.btn-register {
+			display: none;
+		}
+	}
 
+	//MOBILE .menu-principal-container
+	@media (max-width: $xl) {
+		.container-fluid {
+			justify-content: flex-start;
+			.menu-principal-container {
+				margin-left: auto;
+			}
+		}
 
+		//menu desktop
+		#menu-principal-1 {
+			display: none !important;
+		}
+		//MObile btns
+		#menu-principal {
+			display: flex;
+			gap: 10px;
+			li {
+				display: none;
+			}
+			.btn {
+				display: flex !important;
+			}
+		}
+	}
 
-/* CTA 2 buttons only the rest is hide */
-.buttons-cta{
-  li{
-    display:none;
-  }
-  @media(max-width:$md){
-    .btn{
-      display:flex;
-    }
-  }
- 
+	@media (max-width: $xl) {
+		.navbar-brand {
+			margin-right: auto;
+		}
+	}
+	@media (max-width: $sm) {
+		.navbar-brand {
+			margin: auto;
+		}
+		.menu-principal-container {
+			min-width: 100%;
+			#menu-principal {
+				justify-content: center;
+			}
+		}
+	}
+
+	//Desktop
+	@media (min-width: $xl) {
+		//HIDE BTN IN DESKTOP
+		.navbar-toggler {
+			display: none;
+		}
+	}
 }

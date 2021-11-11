@@ -1,12 +1,18 @@
+Mario list extension
+code --list-extensions > extensions.txt
+
+/////////////////////////////////
 code --install-extension christian-kohler.path-intellisense
+code --install-extension CoderFoundry.bootstrap-5-snippets-by-coder-foundry
 code --install-extension CoenraadS.bracket-pair-colorizer-2
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension donjayamanne.githistory
+code --install-extension dsznajder.es7-react-js-snippets
 code --install-extension esbenp.prettier-vscode
 code --install-extension estivo.csv-editor
 code --install-extension FallenMax.mithril-emmet
 code --install-extension formulahendry.auto-rename-tag
-code --install-extension fterrag.vscode-php-cs-fixer
+code --install-extension Gajesh1.React-JS-Snippet
 code --install-extension GitHub.vscode-pull-request-github
 code --install-extension HookyQR.beautify
 code --install-extension janisdd.vscode-edit-csv
@@ -19,6 +25,7 @@ code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension patbenatar.advanced-new-file
 code --install-extension PKief.material-icon-theme
+code --install-extension PriyankPatel.csssnippet
 code --install-extension rifi2k.format-html-in-php
 code --install-extension ritwickdey.live-sass
 code --install-extension ritwickdey.LiveServer
@@ -31,8 +38,3 @@ code --install-extension wesbos.theme-cobalt2
 code --install-extension wordpresstoolbox.wordpress-toolbox
 code --install-extension xabikos.JavaScriptSnippets
 code --install-extension Zignd.html-css-class-completion
-/////////////////
-code --install-extension Gajesh1.React-JS-Snippet
-code --install-extension dsznajder.es7-react-js-snippets
-code --install-extension GraphQL.vscode-graphql
-code --install-extension pnp.polacode

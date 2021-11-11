@@ -1,4 +1,3 @@
-
 /*------------------------------------------------------*/
 /*  login
 /*------------------------------------------------------*/
@@ -14,39 +13,35 @@ function loginFunction() {
 	const popupLoginBtns = document.querySelectorAll('.btn-login-popup');
 	popupLoginBtns.forEach(item => item.addEventListener('click', () => popUpLogin()));
 	const registerBtn = document.querySelectorAll('.btn-register-popup');
-	console.log(registerBtn, 'registerBtn')
+	//console.log(registerBtn, 'registerBtn')
 	registerBtn.forEach(item => item.addEventListener('click', () => popUpRegister()));
 	const closeBtn = document.querySelectorAll('.btn-close');
 	closeBtn.forEach(item => item.addEventListener('click', () => closeAllForms()));
 
-
 	const formDiv = document.querySelectorAll('.formlogin');
 	formDiv.forEach(item => item.addEventListener('click', e => activateForm(e)));
-
-
-
 }
 
 function BackEndLogin(userNameValue, passwordValue) {
-	console.log('BackEndLogin()');
+	//console.log('BackEndLogin()');
 
 	//If there more of one form add active form on click and then select those fields
 
 	let _item = document.getElementById('LoginMessageError_li'); // Clean msj error
 	if (_item) _item.innerHTML = ' ';
 
-	console.log('enter data', userNameValue, ' ', passwordValue);
+	//console.log('enter data', userNameValue, ' ', passwordValue);
 	if (userNameValue && passwordValue) {
 		let _endPoint = 'https://betslipapi.isppro.net/api/player/CheckValidPlayerLogin';
 		let _encode = window.btoa(userNameValue + ':' + passwordValue);
-		console.log(' request');
+		//console.log(' request');
 
 		let _http = new XMLHttpRequest();
 		_http.open('GET', _endPoint);
 		_http.setRequestHeader('Content-Type', 'application/json');
 		_http.setRequestHeader('Authorization', 'Token ' + _encode);
 		_http.send();
-		console.log(' send');
+		//console.log(' send');
 
 		_http.onreadystatechange = result => {
 			switch (result.currentTarget.status) {
@@ -61,8 +56,8 @@ function BackEndLogin(userNameValue, passwordValue) {
 				default:
 					const activeform = document.getElementById('formActive');
 					let _item = activeform.querySelector('.text-danger');
-					console.log(activeform);
-					console.log(_item);
+					//console.log(activeform);
+					//console.log(_item);
 
 					if (_item) {
 						_item.innerHTML = 'Invalid username or password ';
@@ -73,11 +68,10 @@ function BackEndLogin(userNameValue, passwordValue) {
 		};
 	}
 }
-function popUpRegister () {
-		const formDiv = document.querySelector('#registerModal');
+function popUpRegister() {
+	const formDiv = document.querySelector('#registerModal');
 	formDiv.classList.add('show');
 }
-
 
 function popUpLogin() {
 	deactivateForm();
@@ -100,7 +94,7 @@ function deactivateForm() {
 }
 
 function activateForm(e) {
-	console.log('active form');
+	//console.log('active form');
 	e.preventDefault();
 	e.stopPropagation();
 	clearErrors();
@@ -118,12 +112,12 @@ function activateForm(e) {
 }
 
 function clickTheLoginBtn(e) {
-	console.log('logijnnnng ins');
+	//console.log('logijnnnng ins');
 	e.preventDefault();
 	e.stopPropagation();
 
 	const activeform = document.getElementById('formActive');
-	console.log(activeform, 'activeform');
+	//console.log(activeform, 'activeform');
 	//Get user from the active form
 	let _userName = activeform.querySelector('input[name="username_l1"]');
 	let _password = activeform.querySelector('input[name="password_l1"]');
@@ -137,18 +131,18 @@ function clickTheLoginBtn(e) {
 	}
 }
 function checkErrors(user, pass) {
-	console.log(user, pass, 'user, pass');
+	//console.log(user, pass, 'user, pass');
 	const activeform = document.getElementById('formActive');
 	let divErrorLogin = activeform.querySelector('.error__login');
 	let divErrorSignup = activeform.querySelector('.error__signup');
 	clearErrors();
 
 	if (!user) {
-		console.log('Usuario Requerido');
+		//console.log('Usuario Requerido');
 		divErrorLogin.innerHTML = 'Usuario Requerido';
 	}
 	if (!pass) {
-		console.log('Password Requerido');
+		//console.log('Password Requerido');
 		divErrorSignup.innerHTML = 'Password Requerido';
 	}
 }

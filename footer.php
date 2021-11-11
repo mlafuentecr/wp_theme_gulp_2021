@@ -17,21 +17,22 @@ $footer_copy_right  = get_field('copyright', 'options');
 
 <footer class="footer mt-5">
 
-  <section class="menu bg-dark pt-5">
+  <section class="menu bg-gray pt-5">
 
     <div class="container-xl d-flex">
-    <?php dynamic_sidebar( 'footer-1' ); ?>
+      <?php dynamic_sidebar( 'footer-1' ); ?>
     </div>
 
   </section>
 
-  <section class="copyright bg-darker text-center">
-      <?php dynamic_sidebar( 'footer-2' ); ?>
-</section>
+  <section class="copyright bg-gray-ligher  text-center">
+    <?php dynamic_sidebar( 'footer-2' ); ?>
+  </section>
 
 </footer>
 
 </div><!-- wrapper -->
-  <?php wp_footer(); ?>
+<?php wp_footer(); ?>
 </body>
+
 </html>

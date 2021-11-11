@@ -113,117 +113,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_61292678bb633",
-            "label": "Social",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_6129269dbb634",
-            "label": "facebook",
-            "name": "facebook",
-            "type": "text",
-            "instructions": "EXAMPLE:  https:\/\/facebook.com\/starfootball",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_612926c2bb635",
-            "label": "twitter",
-            "name": "twitter",
-            "type": "text",
-            "instructions": "EXAMPLE:  https:\/\/twitter.com\/starfootball",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_6129274448e74",
-            "label": "youtube",
-            "name": "youtube",
-            "type": "text",
-            "instructions": "EXAMPLE:  https:\/\/youtube.com\/starfootball",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_61874a71f4bfb",
-            "label": "whatsapp",
-            "name": "whatsapp",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_6129275048e75",
-            "label": "instagram",
-            "name": "instagram",
-            "type": "text",
-            "instructions": "EXAMPLE:  https:\/\/instagram.com\/starfootball",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5d643d3b1f397",
             "label": "Footer Content",
             "name": "",
@@ -274,5 +163,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1636265894
+    "modified": 1636666036
 }

@@ -109,8 +109,8 @@
 	"workbench.colorCustomizations": {
 		"titleBar.activeForeground": "#ffffff",
 		"titleBar.inactiveForeground": "#cecececc",
-		"titleBar.activeBackground": "#740808",
-		"titleBar.inactiveBackground": "#4d0404"
+		"titleBar.activeBackground": "#740f08",
+		"titleBar.inactiveBackground": "#740f08"
 	},
 	"workbench.colorTheme": "Default Dark+",
 	"[php]": {

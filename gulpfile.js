@@ -15,49 +15,44 @@ sass.compiler = require('node-sass');
 
 ////////// BUNDLES CSS  /////////////////
 function homepageScss() {
-	return (
-		src(['./src/sass/homepage.scss'])
-			.pipe(sass().on('error', sass.logError))
-			.pipe(sourcemaps.init())
-			.pipe(cleanCSS())
-			.pipe(prefix())
-			.pipe(concat('homepage.css'))
-			.pipe(sourcemaps.write('.'))
-			.pipe(
-				rename({
-					suffix: '.min',
-				})
-			)
-			.pipe(dest('./dist/css/'))
-	);
+	return src(['./src/sass/homepage.scss'])
+		.pipe(sass().on('error', sass.logError))
+		.pipe(sourcemaps.init())
+		.pipe(cleanCSS())
+		.pipe(prefix())
+		.pipe(concat('homepage.css'))
+		.pipe(sourcemaps.write('.'))
+		.pipe(
+			rename({
+				suffix: '.min',
+			})
+		)
+		.pipe(dest('./dist/css/'));
 }
 
 function internalScss() {
-	return (
-		src(['./src/sass/internal.scss'])
-			.pipe(sass().on('error', sass.logError))
-			.pipe(prefix())
-			.pipe(cleanCSS())
-			.pipe(sourcemaps.init())
-			.pipe(concat('internal.css'))
-			.pipe(sourcemaps.write('.'))
-			.pipe(
-				rename({
-					suffix: '.min',
-				})
-			)
-			.pipe(dest('./dist/css/'))
-	);
+	return src(['./src/sass/internal.scss'])
+		.pipe(sass().on('error', sass.logError))
+		.pipe(prefix())
+		.pipe(cleanCSS())
+		.pipe(sourcemaps.init())
+		.pipe(concat('internal.css'))
+		.pipe(sourcemaps.write('.'))
+		.pipe(
+			rename({
+				suffix: '.min',
+			})
+		)
+		.pipe(dest('./dist/css/'));
 }
 function cleanAllCss() {
 	//Delte these files bc these files are going to be merege with layout later
 	return del(['./dist/css/*.*']);
 }
 
-
 ////////// BUNDLES JS  /////////////////
 function jsintern() {
-	return src(['./src/js/internal.js', './src/js/iframe.js', './src/js/backEndLogins.js', './src/js/blocks.js', './src/js/bootstrap.bundle.min.js'])
+	return src(['./src/js/menu.js', './src/js/internal.js', './src/js/iframe.js', './src/js/backEndLogins.js', './src/js/blocks.js', './src/js/bootstrap.bundle.min.js'])
 		.pipe(babel())
 		.pipe(uglify())
 		.pipe(concat('bundle_intern.js'))
@@ -65,14 +60,12 @@ function jsintern() {
 }
 
 function jshome() {
-	return src(['./src/js/pwa.js', './src/js/iframe.js',  './src/js/backEndLogins.js', './src/js/slide.js', './src/js/blocks.js', './src/js/bootstrap.bundle.min.js'])
+	return src(['./src/js/menu.js', './src/js/pwa.js', './src/js/iframe.js', './src/js/backEndLogins.js', './src/js/slide.js', './src/js/blocks.js', './src/js/bootstrap.bundle.min.js'])
 		.pipe(babel())
 		.pipe(uglify())
 		.pipe(concat('bundle_home.js'))
 		.pipe(dest('./dist/js/'));
 }
-
-
 
 function copyBundleCss() {
 	return src('./dist/css/*.*').pipe(dest('./src/css/'));
@@ -84,15 +77,12 @@ function copyadmincss() {
 	return src('./src/css/admin/*.css').pipe(dest('./dist/css/admin/'));
 }
 
-
 function watchtask() {
-	
 	watch('./src/sass/*.scss', internalScss);
 	watch('./src/sass/*.scss', homepageScss);
 
 	watch('./src/js/*.js', jsintern);
 	watch('./src/js/*.js', jshome);
-
 
 	watch('./dist/css/*.css', copyBundleCss);
 
@@ -100,4 +90,4 @@ function watchtask() {
 	// watch('./src/images/*.{jpg,png}', webpImage);
 }
 
-exports.default = series(cleanAllCss,   parallel(jshome, jsintern, series(homepageScss, internalScss, copyBundleCss, copyadmincss, watchtask)));
+exports.default = series(cleanAllCss, parallel(jshome, jsintern, series(homepageScss, internalScss, copyBundleCss, copyadmincss, watchtask)));
